@@ -10,6 +10,7 @@ public class TriggerEventer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.tag);
         if(tag == ""){
             onTriggerEnter?.Invoke();
         }
