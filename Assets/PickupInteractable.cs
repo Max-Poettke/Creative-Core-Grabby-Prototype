@@ -7,6 +7,7 @@ public class PickupInteractable : MonoBehaviour, IInteractable
     
     public void Interact()
     {
+        DisplayMessageScript.Instance.delay = 2f;
         InventoryScript.Instance.AddItem(gameObject);
         DisplayMessageScript.Instance.DisplayMessage(interactionDescription);
     }

@@ -7,7 +7,7 @@ public class DisplayMessageScript : MonoBehaviour
     public static DisplayMessageScript Instance;
     [SerializeField] private GameObject messageBox;
     [SerializeField] private TMP_Text messageText;
-    [SerializeField] private float delay = 1f;
+    public float delay = 1f;
 
     private Coroutine hideMessageCoroutine;
     

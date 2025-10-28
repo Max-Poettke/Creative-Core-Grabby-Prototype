@@ -1,8 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
-public class FinalInteractable : MonoBehaviour, IInteractable
+public class GloveInteractable : MonoBehaviour, IInteractable
 {
     public string interactionDescription;
     public string InteractionDescription { get { return interactionDescription; } set { interactionDescription = value; } }
@@ -10,12 +9,9 @@ public class FinalInteractable : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        DisplayMessageScript.Instance.delay = 3f;
         DisplayMessageScript.Instance.DisplayMessage(interactionDescription);
         onInteract?.Invoke();
-        Invoke("Restart", 5f);
-    }
-
-    private void Restart(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Destroy(this.gameObject);
     }
 }

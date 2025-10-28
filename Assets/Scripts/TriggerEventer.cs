@@ -4,6 +4,7 @@ using UnityEngine.Events;
 public class TriggerEventer : MonoBehaviour
 {
     public string tag = "";
+    public string hoverTag = "";
     public UnityEvent onTriggerEnter;
     public UnityEvent onTriggerStay;
     public UnityEvent onTriggerExit;
@@ -16,6 +17,11 @@ public class TriggerEventer : MonoBehaviour
         }
         else if(other.CompareTag(tag)){
             onTriggerEnter?.Invoke();
+        } else if(other.CompareTag(hoverTag)){
+            HoverMessageScript hoverMessageScript = other.GetComponent<HoverMessageScript>();
+            if(hoverMessageScript != null && hoverMessageScript.enabled){
+                DisplayMessageScript.Instance.DisplayMessage(hoverMessageScript.Message);
+            }
         }
     }
 
