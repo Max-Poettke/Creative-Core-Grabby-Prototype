@@ -5277,7 +5277,6 @@ Transform:
   - {fileID: 1211699026}
   - {fileID: 1999883409}
   - {fileID: 607867506}
-  - {fileID: 2024329747}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &829936158
@@ -13141,7 +13140,7 @@ GameObject:
   - component: {fileID: 2024329751}
   - component: {fileID: 2024329750}
   m_Layer: 0
-  m_Name: Lift (1)
+  m_Name: Deathzone
   m_TagString: HasHoverMessage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13156,11 +13155,11 @@ Transform:
   m_GameObject: {fileID: 2024329746}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.7, y: -16.1, z: -5.2}
+  m_LocalPosition: {x: -3.08, y: -13.200001, z: 17.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 808904319}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &2024329748
 Rigidbody:
@@ -13711,3 +13710,4 @@ SceneRoots:
   - {fileID: 251482236}
   - {fileID: 365392892}
   - {fileID: 808904319}
+  - {fileID: 2024329747}
