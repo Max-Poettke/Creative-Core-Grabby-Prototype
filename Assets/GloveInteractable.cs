@@ -9,9 +9,12 @@ public class GloveInteractable : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        onInteract?.Invoke();
+    }
+
+    public void DisplayMessage(){
         DisplayMessageScript.Instance.delay = 3f;
         DisplayMessageScript.Instance.DisplayMessage(interactionDescription);
-        onInteract?.Invoke();
         Destroy(this.gameObject);
     }
 }
