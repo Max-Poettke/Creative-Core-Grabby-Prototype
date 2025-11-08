@@ -30,6 +30,7 @@ public class PreviewTutorialScript : MonoBehaviour
             controller.enabled = true;
             canDeactivateTutorial = false;
             canDeactivateMessage.SetActive(false);
+            Destroy(this.gameObject);
         }
     }
 

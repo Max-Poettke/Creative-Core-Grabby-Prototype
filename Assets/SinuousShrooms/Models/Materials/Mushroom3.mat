@@ -43,7 +43,7 @@ Material:
     - _NoiseEmissionStrength: 0.724
     - _NoisePower: 1.1
     - _NoiseStrength: 1.133
-    - _Offset: 0.29
+    - _Offset: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0.4

@@ -15,6 +15,5 @@ public class GloveInteractable : MonoBehaviour, IInteractable
     public void DisplayMessage(){
         DisplayMessageScript.Instance.delay = 3f;
         DisplayMessageScript.Instance.DisplayMessage(interactionDescription);
-        Destroy(this.gameObject);
     }
 }

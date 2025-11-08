@@ -38,12 +38,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _GradientLength: 1.52
-    - _Metallic: 0
-    - _NoiseEmissionStrength: 1.105
-    - _NoisePower: 0.88
+    - _GradientLength: 1.37
+    - _Metallic: 0.69
+    - _NoiseEmissionStrength: 0.987
+    - _NoisePower: 0.66
     - _NoiseStrength: 1.467
-    - _Offset: 0
+    - _Offset: -0.4
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0.4
@@ -52,8 +52,8 @@ Material:
     m_Colors:
     - _EmissionFlat: {r: 0, g: 0, b: 0, a: 0}
     - _GradientColor1: {r: 0, g: 0.024240296, b: 0.7490196, a: 0}
-    - _GradientColor2: {r: 0.07925909, g: 0.5294118, b: 0, a: 0}
-    - _NoiseEmissionColor: {r: 0.9379772, g: 0.043044984, b: 3.0418513, a: 0}
+    - _GradientColor2: {r: 0.13661504, g: 0.92215127, b: 0, a: 0}
+    - _NoiseEmissionColor: {r: 0.008915964, g: 0.56765074, b: 0.5142068, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &4305852929246987057

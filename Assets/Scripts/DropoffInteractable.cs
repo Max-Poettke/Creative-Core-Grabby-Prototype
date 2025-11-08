@@ -11,6 +11,9 @@ public class DropoffInteractable : MonoBehaviour, IInteractable
     [SerializeField] private GameObject[] gears;
     [SerializeField] private Animator animator;
 
+    [Header("Development state 3")]
+    [SerializeField] private GameObject activationEffects;
+
     [Header("Always used")]
     [SerializeField] private int stateOfDevelopment = 0;
     [SerializeField] private string[] interactionDescriptions;
@@ -31,6 +34,7 @@ public class DropoffInteractable : MonoBehaviour, IInteractable
             {
                 animator.SetTrigger("Fixed");
                 liftScript.EnableLift();
+                activationEffects.SetActive(true);
             }
             stateIndex++;
         } else {

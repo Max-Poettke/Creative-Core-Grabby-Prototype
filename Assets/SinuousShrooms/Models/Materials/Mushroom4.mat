@@ -38,12 +38,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _GradientLength: 1
+    - _GradientLength: 1.25
     - _Metallic: 0
-    - _NoiseEmissionStrength: 0.934
+    - _NoiseEmissionStrength: 1.341
     - _NoisePower: 1.1
     - _NoiseStrength: 1.133
-    - _Offset: -0.34
+    - _Offset: -0.18
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0.4
@@ -51,7 +51,7 @@ Material:
     - _VoronoiCellDensity: 16.9
     m_Colors:
     - _EmissionFlat: {r: 0, g: 0, b: 0, a: 0}
-    - _GradientColor1: {r: 2.4150944, g: 0.07974373, b: 0.1531054, a: 0}
+    - _GradientColor1: {r: 1.3555386, g: 0, b: 0.044202738, a: 1}
     - _GradientColor2: {r: 0.10083661, g: 0.20754719, b: 0.19850393, a: 0}
     - _NoiseEmissionColor: {r: 0.11196156, g: 1.3962263, b: 1.1877854, a: 0}
   m_BuildTextureStacks: []
