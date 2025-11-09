@@ -51,6 +51,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _LowestBrightness: 0.2
     - _Metallic: 0.8
     - _NoiseScale: 25
     - _QueueControl: 0
@@ -58,6 +59,6 @@ Material:
     - _Smoothness: 0
     m_Colors:
     - _Color: {r: 0.3490566, g: 0.2720958, b: 0.12677999, a: 0}
-    - _Emission: {r: 0.2830189, g: 0.22159728, b: 0.13216448, a: 0}
+    - _Emission: {r: 0.041528907, g: 0, b: 0.13207549, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DropoffInteractable : MonoBehaviour, IInteractable
 {
@@ -13,6 +14,7 @@ public class DropoffInteractable : MonoBehaviour, IInteractable
 
     [Header("Development state 3")]
     [SerializeField] private GameObject activationEffects;
+    [SerializeField] private UnityEvent onFixed;
 
     [Header("Always used")]
     [SerializeField] private int stateOfDevelopment = 0;
@@ -35,6 +37,7 @@ public class DropoffInteractable : MonoBehaviour, IInteractable
                 animator.SetTrigger("Fixed");
                 liftScript.EnableLift();
                 activationEffects.SetActive(true);
+                onFixed.Invoke();
             }
             stateIndex++;
         } else {
