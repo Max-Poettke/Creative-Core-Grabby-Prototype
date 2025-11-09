@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.VFX;
 
 public class DropoffInteractable : MonoBehaviour, IInteractable
 {
@@ -15,6 +16,9 @@ public class DropoffInteractable : MonoBehaviour, IInteractable
     [Header("Development state 3")]
     [SerializeField] private GameObject activationEffects;
     [SerializeField] private UnityEvent onFixed;
+    [SerializeField] private UnityEvent onSuccess;
+    [SerializeField] private UnityEvent onFail;
+    [SerializeField] private VisualEffect visualEffect;
 
     [Header("Always used")]
     [SerializeField] private int stateOfDevelopment = 0;
@@ -27,6 +31,9 @@ public class DropoffInteractable : MonoBehaviour, IInteractable
         if(InventoryScript.Instance.RemoveItem())
         {
             DisplayMessageScript.Instance.DisplayMessage(interactionDescriptions[stateIndex]);
+            visualEffect.transform.position = gears[stateIndex].transform.position;
+            visualEffect.Play();
+            onSuccess.Invoke();
             if(stateOfDevelopment < 2) {
                 GetComponent<Renderer>().material = stateMaterials[stateIndex];
             } else {
@@ -42,6 +49,7 @@ public class DropoffInteractable : MonoBehaviour, IInteractable
             stateIndex++;
         } else {
             DisplayMessageScript.Instance.DisplayMessage(interactionDescriptions[4]);
+            onFail.Invoke();
         }
     }
 }

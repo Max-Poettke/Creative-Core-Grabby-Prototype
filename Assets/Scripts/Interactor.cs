@@ -35,4 +35,10 @@ public class Interactor : MonoBehaviour
             }
         }
     }
+
+    public void ClearInteractable()
+    {
+        currentInteractable = null;
+        GetComponent<Renderer>().material = defaultMat;
+    }
 }

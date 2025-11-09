@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using StarterAssets;
-
+using UnityEngine.Events;
 
 public class ClimbingController : MonoBehaviour
 {
@@ -9,6 +9,9 @@ public class ClimbingController : MonoBehaviour
     private CharacterController unityController;
     private StarterAssetsInputs input;
     private PlayerInput playerInput;
+
+    [SerializeField] private UnityEvent onWallAttach;
+    [SerializeField] private UnityEvent onWallDetach;
 
     [SerializeField] private float wallDetectionLength;
     [SerializeField] private float wallSphereCastRadius;
@@ -40,12 +43,14 @@ public class ClimbingController : MonoBehaviour
     private void StartClimbing(){
         thirdPersonController.noMove = true;
         thirdPersonController.noJumpAndGravity = true;
+        onWallAttach.Invoke();
         isClimbing = true;
     }
 
     private void StopClimbing(){
         thirdPersonController.noMove = false;
         thirdPersonController.noJumpAndGravity = false;
+        onWallDetach.Invoke();
         isClimbing = false;
     }
 

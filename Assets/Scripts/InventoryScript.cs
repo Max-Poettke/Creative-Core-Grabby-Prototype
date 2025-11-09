@@ -13,9 +13,14 @@ public class InventoryScript : MonoBehaviour
         Instance = this;
     }
 
+    public bool IsFull()
+    {
+        return InventoryObjects.Count >= InventorySize;
+    }
+
     public void AddItem(GameObject item)
     {
-        if (InventoryObjects.Count < InventorySize)
+        if (!IsFull())
         {
             InventoryObjects.Add(item);
             item.transform.parent = InventorySlots[InventoryObjects.Count - 1];
